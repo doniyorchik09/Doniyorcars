@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doniyor Benz</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #222, #444);
+            color: white;
+            padding: 15px 50px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url('https://files.oaiusercontent.com/file-SyNH8pJbRKPcep3DiFSSNY?se=2025-02-05T12%3A09%3A23Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D24d68122-6150-417b-8a03-d1e25ae52d85.webp&sig=%2BECKrV8hRVj3Ze78l88/waB8RXE9lf8LT8HWBFTDcRM%3D') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+
+        /* CONTENT */
+        section {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .model-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .model-gallery img {
+            width: 200px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .model-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="data:image/jpeg;base64,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" alt="Mercedes-Benz">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#models">Modellar</a></li>
+                <li><a href="#services">Xizmatlar</a></li>
+                <li><a href="#news">Yangiliklar</a></li>
+                <li><a href="#contact">Bog‘lanish</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        Doniyor cars - Innovatsiya, Hashamat va Mukammallik
+    </section>
+
+    <section id="models">
+        <h2>Mercedes-Benz Modellari</h2>
+        <div class="model-gallery">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-26-52.jpg" alt="Model 1">
+            <img src="c:\Users\ZXZ\Desktop\3e36012f-6ae6-4c74-9f46-c58484b09717.jpg" alt="Model 2">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-26-52.jpg" alt="Model 3">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-01.jpg" alt="Model 4">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-05.jpg" alt="Model 5">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-16.jpg" alt="Model 6">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-30.jpg" alt="Model 7">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-26.jpg" alt="Model 8">
+            <img src="c:\Users\ZXZ\Desktop\photo_2025-02-05_15-32-21.jpg" alt="Model 9">
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Xizmatlar</h2>
+        <p>Texnik xizmatlar, aksessuarlar va maxsus buyurtmalar</p>
+    </section>
+
+    <section id="news">
+        <h2>So‘nggi Yangiliklar</h2>
+        <p>Mercedes-Benz avtomobillari dunyosidagi yangiliklar va tadbirlar Mersedez Benzga mashhurlik boyicha hech qaysidavlat yetib kelgani yoq</p>
+    </section>
+
+    <section id="contact">
+        <h2>Bog‘lanish</h2>
+        <p>📞 Telefon: +998 97 437 03 13</p>
+        <p>📧 Email: info;shavkatovdoniyor@gmail.com</p>
+    </section>
+
+    <footer>
+        © 2025 Doniyor Benz. Barcha huquqlar himoyalangan.
+    </footer>
+</body>
+</html>
